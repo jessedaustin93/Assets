@@ -13,7 +13,9 @@ Functional UI shipped ahead of polished art (per "make it work first"):
 - [x] Service web-UI links open in a new tab
 - [x] Agent terminal drill level (read + send on the real thread)
 - [x] Program operations layer: health, logs, assignment, and guarded restart
-  routed to a real agent on the owning machine (local checkout; deploy pending)
+  routed to a real agent on the owning machine
+- [x] Persistent program inventory editing: create, nest, edit, validate, and
+  remove inventory records without uninstalling software
 
 Still placeholder/none: real sprite art, room interiors, effects.
 
@@ -58,12 +60,12 @@ Still placeholder/none: real sprite art, room interiors, effects.
 ## Claude/Codex Tasks
 
 - [ ] Read all design docs before generating or using assets
-- [ ] Build asset loader that supports categories and states
-- [ ] Add fallback placeholder system
+- [x] Build asset loader that supports categories and states
+- [x] Add fallback placeholder system
 - [ ] Add theme support
-- [ ] Add reduced-motion mode
-- [ ] Add low-power/potato mode
-- [ ] Add asset manifest support
+- [x] Add reduced-motion mode
+- [x] Add low-power/potato mode
+- [x] Add asset manifest support
 
 ## Visual Priorities
 

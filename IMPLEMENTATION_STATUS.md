@@ -24,9 +24,15 @@ MAP  →  STATION  →  ROOM (nested)  →  PROGRAM OPERATIONS
   runtime, path, URL, and explicit Web UI / Health Check / View Logs / Assign
   Agent / Restart controls. Agent-backed actions use an online agent on the
   owning machine. Health and logs are read-only; restart is confirmed and keeps
-  privileged work behind the exact-command approval workflow. This layer is in
-  the HP working checkout and awaits T5810 deployment.
+  privileged work behind the exact-command approval workflow.
+- **Inventory editing** — authenticated UI controls create top-level programs or
+  nested children, edit metadata/type/state/probes, and remove inventory records
+  after confirmation. The canonical runtime catalog persists atomically at
+  `/data/stations.json`; removal never uninstalls software.
 - **Terminal** — click an agent → its live `world/@agent` thread (read + send).
+
+World also has an asset manifest loader with procedural fallbacks. Full,
+reduced-motion, and low-power render modes are selectable and persisted locally.
 
 ## Machines (stations) — keyed by agent-id suffix
 
@@ -59,7 +65,7 @@ X1: Aeon (`C:\dev\ai\aeon-v1`), SnifferOps, Android dev (no web telemetry yet).
 
 - Hub: `telemetry` table + `GET/POST /api/telemetry`.
 - Collector: `telemetry/collector.py`, a stdlib systemd **user** service on T5810
-  (`agent-mesh-telemetry.service`). Every 30s it reads `stations.json`,
+  (`agent-mesh-telemetry.service`). Every 30s it reads `/api/stations`,
   TCP-probes every node with a `probe {host,port}` over the tailnet, gathers
   T5810 GPU/CPU/RAM, and POSTs results.
 - World colours each room by live state: **up** (green + latency), **down** (red),
@@ -87,11 +93,10 @@ X1: Aeon (`C:\dev\ai\aeon-v1`), SnifferOps, Android dev (no web telemetry yet).
 - `probe` → monitored; `id` must be globally unique. `url` → opens web UI.
 - `state` (live | structure | planned) is the authored fallback when no probe.
 
-Edit `stations.json` to grow structure; the collector and UI pick it up with no
-code changes.
+The authenticated World editor writes the persistent catalog through
+`GET/PUT /api/stations`; the collector and UI consume that same document.
 
 ## Current deployment note
 
-- qBittorrent and LazyLibrarian were repaired on T3610 after the original
-  snapshot. The program-operations controls described above are not deployed to
-  T5810 yet.
+- Program operations and complete inventory editing are deployed on T5810.
+- qBittorrent and LazyLibrarian were repaired on T3610 after the original snapshot.
