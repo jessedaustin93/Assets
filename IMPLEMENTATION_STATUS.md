@@ -33,6 +33,9 @@ MAP  →  STATION  →  ROOM (nested)  →  PROGRAM OPERATIONS
 
 World also has an asset manifest loader with procedural fallbacks. Full,
 reduced-motion, and low-power render modes are selectable and persisted locally.
+The first eight-family/five-state station concept sheet is stored in
+`concepts/concept_station_icons_v1.png` with an RGBA background-removed copy;
+individual production crops are intentionally still pending quality review.
 
 ## Machines (stations) — keyed by agent-id suffix
 

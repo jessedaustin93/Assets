@@ -39,7 +39,7 @@ Still placeholder/none: real sprite art, room interiors, effects.
 ## Next Asset Sheets
 
 - [ ] Agent role sprite sheet
-- [ ] Station icon sheet
+- [x] Station icon sheet
 - [ ] Room interior sheet
 - [ ] UI component sheet
 - [ ] Effects sheet
