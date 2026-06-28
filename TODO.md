@@ -12,6 +12,8 @@ Functional UI shipped ahead of polished art (per "make it work first"):
 - [x] Host metrics on stations (GPU/RAM/load for T5810)
 - [x] Service web-UI links open in a new tab
 - [x] Agent terminal drill level (read + send on the real thread)
+- [x] Program operations layer: health, logs, assignment, and guarded restart
+  routed to a real agent on the owning machine (local checkout; deploy pending)
 
 Still placeholder/none: real sprite art, room interiors, effects.
 

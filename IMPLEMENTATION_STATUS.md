@@ -11,7 +11,8 @@ Tailscale Serve.
 ## Navigation (implemented)
 
 ```
-MAP  →  STATION  →  ROOM (nested)  →  AGENT TERMINAL
+MAP  →  STATION  →  ROOM (nested)  →  PROGRAM OPERATIONS
+                                      └→  AGENT TERMINAL
 ```
 
 - **Map** — one station per machine in a ring; central Command core = operator;
@@ -19,6 +20,12 @@ MAP  →  STATION  →  ROOM (nested)  →  AGENT TERMINAL
 - **Station** — the machine's services as rooms; live agents in an OPS strip.
 - **Room** — nests via `children[]` (e.g. Arr Stack → Sonarr/Radarr/…). A room
   with a `url` opens that service's web UI in a new browser tab.
+- **Program operations** — a leaf program shows live state, latency, probe,
+  runtime, path, URL, and explicit Web UI / Health Check / View Logs / Assign
+  Agent / Restart controls. Agent-backed actions use an online agent on the
+  owning machine. Health and logs are read-only; restart is confirmed and keeps
+  privileged work behind the exact-command approval workflow. This layer is in
+  the HP working checkout and awaits T5810 deployment.
 - **Terminal** — click an agent → its live `world/@agent` thread (read + send).
 
 ## Machines (stations) — keyed by agent-id suffix
@@ -83,7 +90,8 @@ X1: Aeon (`C:\dev\ai\aeon-v1`), SnifferOps, Android dev (no web telemetry yet).
 Edit `stations.json` to grow structure; the collector and UI pick it up with no
 code changes.
 
-## Known real issues (honest telemetry)
+## Current deployment note
 
-- `qbittorrent` and `lazylibrarian` probe **down** from the T5810 tailnet probe
-  (likely gluetun/bind firewalling those ports from the tailnet) — worth a check.
+- qBittorrent and LazyLibrarian were repaired on T3610 after the original
+  snapshot. The program-operations controls described above are not deployed to
+  T5810 yet.
