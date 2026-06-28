@@ -32,6 +32,8 @@ MAP  →  STATION  →  ROOM (nested)  →  PROGRAM OPERATIONS
   after confirmation. The canonical runtime catalog persists atomically at
   `/data/stations.json`; removal never uninstalls software.
 - **Terminal** — click an agent → its live `world/@agent` thread (read + send).
+  The deployed terminal uses the tactical panel language with a framed transcript
+  and responsive command controls; it remains plain DOM text for low-end hardware.
 
 World also has an asset manifest loader with procedural fallbacks. Full,
 reduced-motion, and low-power render modes are selectable and persisted locally.
@@ -106,4 +108,6 @@ The authenticated World editor writes the persistent catalog through
 - Program operations and complete inventory editing are deployed on T5810.
 - World, Station, and Program Operations appearance layouts are deployed through
   `world.js?v=18` (Agent Mesh commit `2c13245`).
+- The tactical agent Terminal is deployed as `terminal.css?v=1` (Agent Mesh
+  commit `b43ff25`).
 - qBittorrent and LazyLibrarian were repaired on T3610 after the original snapshot.
