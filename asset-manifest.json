@@ -1,6 +1,7 @@
 {
   "version": 1,
+  "project": "Agent Mesh Assets",
   "basePath": "/static/assets/",
-  "description": "Canonical Agent Mesh asset manifest template. Keys may be theme.category.subject.state or category.subject.state. Missing keys use procedural canvas fallbacks.",
-  "assets": {}
+  "description": "Canonical production manifest. Add records following docs/ASSET_MANIFEST_SCHEMA.md.",
+  "assets": []
 }
