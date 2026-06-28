@@ -1,0 +1,53 @@
+{
+  "version": 1,
+  "states": {
+    "idle": {
+      "meaning": "Online, healthy, and not actively doing visible work.",
+      "visual_hint": "Stable low-intensity glow or static normal icon."
+    },
+    "busy": {
+      "meaning": "Online and actively doing work.",
+      "visual_hint": "Subtle pulse, active room light, or moving activity indicator."
+    },
+    "warning": {
+      "meaning": "Needs attention but is not fully failed.",
+      "visual_hint": "Yellow accent, warning border, or slow pulse."
+    },
+    "error": {
+      "meaning": "A service, task, or host has failed.",
+      "visual_hint": "Red accent, error ring, or alert marker."
+    },
+    "offline": {
+      "meaning": "Host or service is unreachable or intentionally powered down.",
+      "visual_hint": "Dimmed asset, broken connection indicator, or gray overlay."
+    },
+    "selected": {
+      "meaning": "Currently selected by the user.",
+      "visual_hint": "Selection ring or bright outline rendered as overlay."
+    },
+    "hover": {
+      "meaning": "Pointer or focus hover state.",
+      "visual_hint": "Light outline or tooltip trigger."
+    },
+    "connecting": {
+      "meaning": "Connection/session is being opened.",
+      "visual_hint": "Animated line or pulsing endpoint."
+    },
+    "updating": {
+      "meaning": "Service, station, or asset is being changed.",
+      "visual_hint": "Construction/update shimmer or progress overlay."
+    },
+    "blocked": {
+      "meaning": "Agent or task is waiting for input, permission, or missing dependency.",
+      "visual_hint": "Yellow blocked indicator and paused animation."
+    },
+    "complete": {
+      "meaning": "Task completed successfully.",
+      "visual_hint": "Short green/cyan success pulse."
+    },
+    "failed": {
+      "meaning": "Task ended unsuccessfully.",
+      "visual_hint": "Short red failure pulse and log link."
+    }
+  }
+}
