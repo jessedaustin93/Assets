@@ -1,7 +1,7 @@
 # Agent Mesh — Live Implementation Status
 
 Snapshot of what the working World view actually implements, so asset/design work
-stays tied to the real app. Updated 2026-06-27.
+stays tied to the real app. Updated 2026-06-28.
 
 App lives in the `agent-mesh` repo: hub at `hub/`, World view at
 `hub/static/world.js`, structure in `hub/static/stations.json`, telemetry
@@ -24,7 +24,9 @@ MAP  →  STATION  →  ROOM (nested)  →  PROGRAM OPERATIONS
   runtime, path, URL, and explicit Web UI / Health Check / View Logs / Assign
   Agent / Restart controls. Agent-backed actions use an online agent on the
   owning machine. Health and logs are read-only; restart is confirmed and keeps
-  privileged work behind the exact-command approval workflow.
+  privileged work behind the exact-command approval workflow. Its deployed
+  tactical layout separates identity/purpose, real telemetry/routing, explicit
+  health state, and the command deck while remaining responsive.
 - **Inventory editing** — authenticated UI controls create top-level programs or
   nested children, edit metadata/type/state/probes, and remove inventory records
   after confirmation. The canonical runtime catalog persists atomically at
@@ -102,4 +104,6 @@ The authenticated World editor writes the persistent catalog through
 ## Current deployment note
 
 - Program operations and complete inventory editing are deployed on T5810.
+- World, Station, and Program Operations appearance layouts are deployed through
+  `world.js?v=18` (Agent Mesh commit `2c13245`).
 - qBittorrent and LazyLibrarian were repaired on T3610 after the original snapshot.
