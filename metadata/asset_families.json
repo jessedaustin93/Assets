@@ -1,0 +1,91 @@
+{
+  "version": 1,
+  "categories": {
+    "station": {
+      "description": "World-map hosts, machines, and nodes.",
+      "subjects": [
+        "t5810_ai_flagship",
+        "t3610_media_station",
+        "pi5_sensor_outpost",
+        "hp_automation_node",
+        "chromebook_kiosk",
+        "esp32_recon_node",
+        "cloud_relay",
+        "backup_station",
+        "generic_station"
+      ],
+      "states": ["idle", "busy", "warning", "error", "offline", "selected", "hover", "connecting", "updating"]
+    },
+    "room": {
+      "description": "Drill-down interiors for services and projects.",
+      "subjects": [
+        "bridge",
+        "ai_core",
+        "engineering",
+        "docker_bay",
+        "jellyfin_theater",
+        "arr_cargo_office",
+        "vaultwarden_vault",
+        "snifferops_radar",
+        "communications",
+        "storage_room",
+        "build_lab",
+        "generic_room"
+      ],
+      "states": ["idle", "busy", "warning", "error", "offline", "selected", "locked", "unlocked", "updating", "alert"]
+    },
+    "agent": {
+      "description": "AI helpers, automations, bots, and task workers.",
+      "subjects": [
+        "commander",
+        "engineer",
+        "developer",
+        "scientist",
+        "signal_officer",
+        "security_officer",
+        "cargo_bot",
+        "maintenance_bot",
+        "recon_drone",
+        "generic_agent"
+      ],
+      "states": ["idle", "walk", "type", "repair", "carry", "scan", "alert", "blocked", "complete", "return"]
+    },
+    "effect": {
+      "description": "Visual overlays for activity, status, and alerts.",
+      "subjects": [
+        "ssh_beam",
+        "deploy_beam",
+        "packet_flow",
+        "radar_sweep",
+        "new_contact_pulse",
+        "warning_pulse",
+        "error_pulse",
+        "success_pulse",
+        "gpu_core_glow",
+        "cpu_heat_glow",
+        "storage_fill",
+        "construction_update",
+        "service_restart",
+        "generic_effect"
+      ],
+      "states": ["connecting", "active", "failed", "complete", "warning", "error", "critical", "normal", "busy", "loop", "start", "end"]
+    },
+    "ui": {
+      "description": "Reusable HUD, panels, controls, icons, status indicators, and selection pieces.",
+      "subjects": [
+        "panel",
+        "button",
+        "selection_ring",
+        "status_dot",
+        "progress_bar",
+        "tooltip",
+        "command_menu",
+        "alert_banner",
+        "minimap_frame",
+        "terminal_frame",
+        "resource_bar"
+      ],
+      "states": ["idle", "hover", "selected", "active", "disabled", "warning", "error"]
+    }
+  }
+}
