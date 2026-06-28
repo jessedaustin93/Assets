@@ -62,7 +62,7 @@ Still placeholder/none: real sprite art, room interiors, effects.
 - [ ] Read all design docs before generating or using assets
 - [x] Build asset loader that supports categories and states
 - [x] Add fallback placeholder system
-- [ ] Add theme support
+- [x] Add theme support
 - [x] Add reduced-motion mode
 - [x] Add low-power/potato mode
 - [x] Add asset manifest support

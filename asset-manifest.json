@@ -1,6 +1,6 @@
 {
   "version": 1,
   "basePath": "/static/assets/",
-  "description": "Canonical Agent Mesh asset manifest template. Missing keys use procedural canvas fallbacks.",
+  "description": "Canonical Agent Mesh asset manifest template. Keys may be theme.category.subject.state or category.subject.state. Missing keys use procedural canvas fallbacks.",
   "assets": {}
 }
