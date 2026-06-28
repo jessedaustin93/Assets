@@ -1,0 +1,89 @@
+# Agent Mesh — Live Implementation Status
+
+Snapshot of what the working World view actually implements, so asset/design work
+stays tied to the real app. Updated 2026-06-27.
+
+App lives in the `agent-mesh` repo: hub at `hub/`, World view at
+`hub/static/world.js`, structure in `hub/static/stations.json`, telemetry
+collector at `telemetry/collector.py`. Deployed on T5810, tailnet-only via
+Tailscale Serve.
+
+## Navigation (implemented)
+
+```
+MAP  →  STATION  →  ROOM (nested)  →  AGENT TERMINAL
+```
+
+- **Map** — one station per machine in a ring; central Command core = operator;
+  tailnet lanes; shuttles = real `/api/activity` messages (sender→recipient).
+- **Station** — the machine's services as rooms; live agents in an OPS strip.
+- **Room** — nests via `children[]` (e.g. Arr Stack → Sonarr/Radarr/…). A room
+  with a `url` opens that service's web UI in a new browser tab.
+- **Terminal** — click an agent → its live `world/@agent` thread (read + send).
+
+## Machines (stations) — keyed by agent-id suffix
+
+Stations are keyed by the agent-id suffix (`hp`/`t5810`/`t3610`/`x1`), NOT the
+reported hostname, so they join reliably to agents.
+
+| Key | Label | Real role |
+|---|---|---|
+| `t5810` | T5810 · AI Flagship | hub host, GTX 1070, heavy compute, telemetry collector |
+| `t3610` | T3610 · Media & Infra | Docker media/arr stack, GTX 970 |
+| `hp` | HP ProBook 650-G2 | daily driver / control, Vaultwarden |
+| `x1` | ROG Ally (X1) | Windows: Aeon, SnifferOps, Android dev |
+
+## Real services discovered (2026-06-27, live-probed)
+
+T3610 (Docker): Jellyfin :8096, Plex :32400, Sonarr :8989, Radarr :7878,
+Lidarr :8686, Prowlarr :9696, LazyLibrarian :5299, Jellyseerr :5055,
+Navidrome :4533, Calibre-Web :8083, qBittorrent :8080 (via gluetun VPN),
+slskd :5030, FlareSolverr :8191. Media on `/mnt/jellymedia1·2`, `/mnt/music`,
+`/mnt/nas-ssd`.
+
+T5810: Agent Mesh Hub :8787, GPU Reactor (GTX 1070), `/srv/mesh-vault`;
+planned Aeon Core + SnifferOps.
+
+HP: Vaultwarden (tailscale-served), SnifferOps, Agent Mesh dev checkout.
+
+X1: Aeon (`C:\dev\ai\aeon-v1`), SnifferOps, Android dev (no web telemetry yet).
+
+## Telemetry (implemented, real — no fake status)
+
+- Hub: `telemetry` table + `GET/POST /api/telemetry`.
+- Collector: `telemetry/collector.py`, a stdlib systemd **user** service on T5810
+  (`agent-mesh-telemetry.service`). Every 30s it reads `stations.json`,
+  TCP-probes every node with a `probe {host,port}` over the tailnet, gathers
+  T5810 GPU/CPU/RAM, and POSTs results.
+- World colours each room by live state: **up** (green + latency), **down** (red),
+  **no telemetry** (amber), **planned** (dashed). Stations show `up/total`.
+
+## stations.json schema (single source of truth)
+
+```jsonc
+"t3610": {
+  "label": "T3610 · Media & Infra",
+  "host": "t3610.tail6777bc.ts.net",
+  "role": "...",
+  "rooms": [
+    { "id": "t3610.arr", "name": "Arr Stack", "type": "media",
+      "children": [
+        { "id": "t3610.sonarr", "name": "Sonarr", "type": "media",
+          "probe": { "host": "t3610.tail6777bc.ts.net", "port": 8989 },
+          "url": "http://t3610.tail6777bc.ts.net:8989", "note": "TV" }
+      ] }
+  ]
+}
+```
+
+- `type` ∈ reactor | bridge | lab | media | cargo | vault | comms (drives theme).
+- `probe` → monitored; `id` must be globally unique. `url` → opens web UI.
+- `state` (live | structure | planned) is the authored fallback when no probe.
+
+Edit `stations.json` to grow structure; the collector and UI pick it up with no
+code changes.
+
+## Known real issues (honest telemetry)
+
+- `qbittorrent` and `lazylibrarian` probe **down** from the T5810 tailnet probe
+  (likely gluetun/bind firewalling those ports from the tailnet) — worth a check.

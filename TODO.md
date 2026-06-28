@@ -2,6 +2,19 @@
 
 This list tracks near-term asset and documentation work.
 
+## Live in app (2026-06-27)
+
+Functional UI shipped ahead of polished art (per "make it work first"):
+
+- [x] World map with real machine stations (keyed by agent-id suffix)
+- [x] Station drill-down → rooms; nested rooms (Arr Stack, Downloads → programs)
+- [x] Real service liveness telemetry (collector + `/api/telemetry`); rooms lit up/down
+- [x] Host metrics on stations (GPU/RAM/load for T5810)
+- [x] Service web-UI links open in a new tab
+- [x] Agent terminal drill level (read + send on the real thread)
+
+Still placeholder/none: real sprite art, room interiors, effects.
+
 ## Immediate
 
 - [x] Create repo structure

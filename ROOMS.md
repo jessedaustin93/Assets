@@ -4,6 +4,11 @@ Rooms represent real services, projects, or functional zones inside a station.
 
 A room is not just decoration. It should expose useful controls, live status, logs, agents, and tasks.
 
+> **Live status:** rooms are implemented, nest via `children[]`, open a service's
+> web UI when they carry a `url`, and are coloured by real liveness from the
+> telemetry collector (up / down / no-telemetry / planned). See
+> [IMPLEMENTATION_STATUS.md](IMPLEMENTATION_STATUS.md).
+
 ## Room Data Model
 
 Each room should eventually support:

@@ -2,6 +2,11 @@
 
 Stations are the RTS-style representation of real machines, hosts, or major environments.
 
+> **Live status:** the working implementation, real per-machine services, and the
+> `stations.json` schema are documented in [IMPLEMENTATION_STATUS.md](IMPLEMENTATION_STATUS.md).
+> Stations are keyed by agent-id suffix (`t5810`/`t3610`/`hp`/`x1`) and lit by real
+> telemetry. There are 4 machines on the network today.
+
 Each station should be visually distinct, clickable, and tied to live status.
 
 ## Station Data Model
