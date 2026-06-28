@@ -1,0 +1,24 @@
+{
+  "version": 1,
+  "fallback_order": [
+    "exact_match",
+    "same_subject_idle",
+    "generic_subject_same_state",
+    "generic_subject_idle",
+    "category_placeholder"
+  ],
+  "category_placeholders": {
+    "station": "placeholder_station",
+    "room": "placeholder_room",
+    "agent": "placeholder_agent",
+    "effect": "placeholder_effect",
+    "ui": "placeholder_ui",
+    "icon": "placeholder_icon",
+    "background": "placeholder_background"
+  },
+  "notes": [
+    "Never crash the UI because an asset is missing.",
+    "Log missing exact assets so they can be generated later.",
+    "Use placeholders during development and low-power mode when needed."
+  ]
+}
