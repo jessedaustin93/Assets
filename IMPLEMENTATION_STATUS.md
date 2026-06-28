@@ -110,4 +110,11 @@ The authenticated World editor writes the persistent catalog through
   `world.js?v=18` (Agent Mesh commit `2c13245`).
 - The tactical agent Terminal is deployed as `terminal.css?v=1` (Agent Mesh
   commit `b43ff25`).
+- Generated the agent, background, icon, and prop concept sheets from the current
+  prompt set. Validated and cropped 12 optimized WebP backgrounds and 20
+  transparent WebP room props, recorded them in `metadata/assets.manifest.json`,
+  and deployed them through the runtime manifest in Agent Mesh commit `46d4eec`.
+  World uses the network/station/low-power backdrops and selects room props from
+  real inventory metadata. Agent and icon sheets remain concept sources until
+  clean per-cell production crops are validated.
 - qBittorrent and LazyLibrarian were repaired on T3610 after the original snapshot.

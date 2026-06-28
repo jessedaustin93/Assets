@@ -38,13 +38,13 @@ Still placeholder/none: real sprite art, room interiors, effects.
 
 ## Next Asset Sheets
 
-- [ ] Agent role sprite sheet
+- [x] Agent role sprite sheet
 - [x] Station icon sheet
 - [ ] Room interior sheet
 - [ ] UI component sheet
 - [ ] Effects sheet
-- [ ] Status icon sheet
-- [ ] Background/grid sheet
+- [x] Status icon sheet
+- [x] Background/grid sheet
 
 ## Production Prep
 
@@ -52,7 +52,7 @@ Still placeholder/none: real sprite art, room interiors, effects.
 - [ ] Create transparent PNG versions
 - [ ] Create WebP optimized versions
 - [ ] Add source prompts beside generated images
-- [ ] Add metadata JSON for asset families
+- [x] Add metadata JSON for the validated background and prop families
 - [ ] Decide sprite sizes
 - [ ] Decide room tile sizes
 - [ ] Decide station icon sizes

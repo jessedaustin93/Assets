@@ -1,0 +1,295 @@
+{
+  "version": 1,
+  "project": "Agent Mesh",
+  "description": "Validated production crops derived from generated concept sheets.",
+  "assets": [
+    {
+      "id": "background_world_grid_idle_01",
+      "category": "background",
+      "subject": "world_grid",
+      "state": "idle",
+      "theme": "tactical",
+      "path": "backgrounds/background_world_grid_idle_01.webp",
+      "source": "concepts/concept_backgrounds_v1.png"
+    },
+    {
+      "id": "background_network_map_idle_01",
+      "category": "background",
+      "subject": "network_map",
+      "state": "idle",
+      "theme": "tactical",
+      "path": "backgrounds/background_network_map_idle_01.webp",
+      "source": "concepts/concept_backgrounds_v1.png"
+    },
+    {
+      "id": "background_station_floor_idle_01",
+      "category": "background",
+      "subject": "station_floor",
+      "state": "idle",
+      "theme": "tactical",
+      "path": "backgrounds/background_station_floor_idle_01.webp",
+      "source": "concepts/concept_backgrounds_v1.png"
+    },
+    {
+      "id": "background_room_floor_idle_01",
+      "category": "background",
+      "subject": "room_floor",
+      "state": "idle",
+      "theme": "tactical",
+      "path": "backgrounds/background_room_floor_idle_01.webp",
+      "source": "concepts/concept_backgrounds_v1.png"
+    },
+    {
+      "id": "background_radar_map_idle_01",
+      "category": "background",
+      "subject": "radar_map",
+      "state": "idle",
+      "theme": "tactical",
+      "path": "backgrounds/background_radar_map_idle_01.webp",
+      "source": "concepts/concept_backgrounds_v1.png"
+    },
+    {
+      "id": "background_terminal_panel_idle_01",
+      "category": "background",
+      "subject": "terminal_panel",
+      "state": "idle",
+      "theme": "tactical",
+      "path": "backgrounds/background_terminal_panel_idle_01.webp",
+      "source": "concepts/concept_backgrounds_v1.png"
+    },
+    {
+      "id": "background_low_power_idle_01",
+      "category": "background",
+      "subject": "low_power",
+      "state": "idle",
+      "theme": "tactical",
+      "path": "backgrounds/background_low_power_idle_01.webp",
+      "source": "concepts/concept_backgrounds_v1.png"
+    },
+    {
+      "id": "background_holographic_grid_idle_01",
+      "category": "background",
+      "subject": "holographic_grid",
+      "state": "idle",
+      "theme": "tactical",
+      "path": "backgrounds/background_holographic_grid_idle_01.webp",
+      "source": "concepts/concept_backgrounds_v1.png"
+    },
+    {
+      "id": "background_storage_floor_idle_01",
+      "category": "background",
+      "subject": "storage_floor",
+      "state": "idle",
+      "theme": "tactical",
+      "path": "backgrounds/background_storage_floor_idle_01.webp",
+      "source": "concepts/concept_backgrounds_v1.png"
+    },
+    {
+      "id": "background_engineering_floor_idle_01",
+      "category": "background",
+      "subject": "engineering_floor",
+      "state": "idle",
+      "theme": "tactical",
+      "path": "backgrounds/background_engineering_floor_idle_01.webp",
+      "source": "concepts/concept_backgrounds_v1.png"
+    },
+    {
+      "id": "background_ai_core_floor_idle_01",
+      "category": "background",
+      "subject": "ai_core_floor",
+      "state": "idle",
+      "theme": "tactical",
+      "path": "backgrounds/background_ai_core_floor_idle_01.webp",
+      "source": "concepts/concept_backgrounds_v1.png"
+    },
+    {
+      "id": "background_communications_map_idle_01",
+      "category": "background",
+      "subject": "communications_map",
+      "state": "idle",
+      "theme": "tactical",
+      "path": "backgrounds/background_communications_map_idle_01.webp",
+      "source": "concepts/concept_backgrounds_v1.png"
+    },
+    {
+      "id": "prop_terminal_console_idle_01",
+      "category": "prop",
+      "subject": "terminal_console",
+      "state": "idle",
+      "theme": "tactical",
+      "path": "sprites/props/prop_terminal_console_idle_01.webp",
+      "source": "concepts/concept_props_sheet_v1.png"
+    },
+    {
+      "id": "prop_server_rack_idle_01",
+      "category": "prop",
+      "subject": "server_rack",
+      "state": "idle",
+      "theme": "tactical",
+      "path": "sprites/props/prop_server_rack_idle_01.webp",
+      "source": "concepts/concept_props_sheet_v1.png"
+    },
+    {
+      "id": "prop_gpu_rack_idle_01",
+      "category": "prop",
+      "subject": "gpu_rack",
+      "state": "idle",
+      "theme": "tactical",
+      "path": "sprites/props/prop_gpu_rack_idle_01.webp",
+      "source": "concepts/concept_props_sheet_v1.png"
+    },
+    {
+      "id": "prop_model_storage_rack_idle_01",
+      "category": "prop",
+      "subject": "model_storage_rack",
+      "state": "idle",
+      "theme": "tactical",
+      "path": "sprites/props/prop_model_storage_rack_idle_01.webp",
+      "source": "concepts/concept_props_sheet_v1.png"
+    },
+    {
+      "id": "prop_vault_door_idle_01",
+      "category": "prop",
+      "subject": "vault_door",
+      "state": "idle",
+      "theme": "tactical",
+      "path": "sprites/props/prop_vault_door_idle_01.webp",
+      "source": "concepts/concept_props_sheet_v1.png"
+    },
+    {
+      "id": "prop_lock_console_idle_01",
+      "category": "prop",
+      "subject": "lock_console",
+      "state": "idle",
+      "theme": "tactical",
+      "path": "sprites/props/prop_lock_console_idle_01.webp",
+      "source": "concepts/concept_props_sheet_v1.png"
+    },
+    {
+      "id": "prop_radar_screen_idle_01",
+      "category": "prop",
+      "subject": "radar_screen",
+      "state": "idle",
+      "theme": "tactical",
+      "path": "sprites/props/prop_radar_screen_idle_01.webp",
+      "source": "concepts/concept_props_sheet_v1.png"
+    },
+    {
+      "id": "prop_antenna_mast_idle_01",
+      "category": "prop",
+      "subject": "antenna_mast",
+      "state": "idle",
+      "theme": "tactical",
+      "path": "sprites/props/prop_antenna_mast_idle_01.webp",
+      "source": "concepts/concept_props_sheet_v1.png"
+    },
+    {
+      "id": "prop_network_map_table_idle_01",
+      "category": "prop",
+      "subject": "network_map_table",
+      "state": "idle",
+      "theme": "tactical",
+      "path": "sprites/props/prop_network_map_table_idle_01.webp",
+      "source": "concepts/concept_props_sheet_v1.png"
+    },
+    {
+      "id": "prop_media_screen_idle_01",
+      "category": "prop",
+      "subject": "media_screen",
+      "state": "idle",
+      "theme": "tactical",
+      "path": "sprites/props/prop_media_screen_idle_01.webp",
+      "source": "concepts/concept_props_sheet_v1.png"
+    },
+    {
+      "id": "prop_drive_rack_idle_01",
+      "category": "prop",
+      "subject": "drive_rack",
+      "state": "idle",
+      "theme": "tactical",
+      "path": "sprites/props/prop_drive_rack_idle_01.webp",
+      "source": "concepts/concept_props_sheet_v1.png"
+    },
+    {
+      "id": "prop_backup_crates_idle_01",
+      "category": "prop",
+      "subject": "backup_crates",
+      "state": "idle",
+      "theme": "tactical",
+      "path": "sprites/props/prop_backup_crates_idle_01.webp",
+      "source": "concepts/concept_props_sheet_v1.png"
+    },
+    {
+      "id": "prop_cargo_crates_idle_01",
+      "category": "prop",
+      "subject": "cargo_crates",
+      "state": "idle",
+      "theme": "tactical",
+      "path": "sprites/props/prop_cargo_crates_idle_01.webp",
+      "source": "concepts/concept_props_sheet_v1.png"
+    },
+    {
+      "id": "prop_sorting_conveyor_idle_01",
+      "category": "prop",
+      "subject": "sorting_conveyor",
+      "state": "idle",
+      "theme": "tactical",
+      "path": "sprites/props/prop_sorting_conveyor_idle_01.webp",
+      "source": "concepts/concept_props_sheet_v1.png"
+    },
+    {
+      "id": "prop_repair_bench_idle_01",
+      "category": "prop",
+      "subject": "repair_bench",
+      "state": "idle",
+      "theme": "tactical",
+      "path": "sprites/props/prop_repair_bench_idle_01.webp",
+      "source": "concepts/concept_props_sheet_v1.png"
+    },
+    {
+      "id": "prop_build_terminal_idle_01",
+      "category": "prop",
+      "subject": "build_terminal",
+      "state": "idle",
+      "theme": "tactical",
+      "path": "sprites/props/prop_build_terminal_idle_01.webp",
+      "source": "concepts/concept_props_sheet_v1.png"
+    },
+    {
+      "id": "prop_drone_dock_idle_01",
+      "category": "prop",
+      "subject": "drone_dock",
+      "state": "idle",
+      "theme": "tactical",
+      "path": "sprites/props/prop_drone_dock_idle_01.webp",
+      "source": "concepts/concept_props_sheet_v1.png"
+    },
+    {
+      "id": "prop_warning_beacon_idle_01",
+      "category": "prop",
+      "subject": "warning_beacon",
+      "state": "idle",
+      "theme": "tactical",
+      "path": "sprites/props/prop_warning_beacon_idle_01.webp",
+      "source": "concepts/concept_props_sheet_v1.png"
+    },
+    {
+      "id": "prop_service_control_panel_idle_01",
+      "category": "prop",
+      "subject": "service_control_panel",
+      "state": "idle",
+      "theme": "tactical",
+      "path": "sprites/props/prop_service_control_panel_idle_01.webp",
+      "source": "concepts/concept_props_sheet_v1.png"
+    },
+    {
+      "id": "prop_logs_terminal_idle_01",
+      "category": "prop",
+      "subject": "logs_terminal",
+      "state": "idle",
+      "theme": "tactical",
+      "path": "sprites/props/prop_logs_terminal_idle_01.webp",
+      "source": "concepts/concept_props_sheet_v1.png"
+    }
+  ]
+}
