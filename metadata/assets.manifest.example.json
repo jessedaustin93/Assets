@@ -1,0 +1,73 @@
+{
+  "version": 1,
+  "project": "Agent Mesh Assets",
+  "description": "Example manifest showing how Agent Mesh can resolve assets by meaning instead of hardcoded paths.",
+  "assets": [
+    {
+      "id": "station_t5810_ai_flagship_idle_01",
+      "category": "station",
+      "subject": "t5810_ai_flagship",
+      "state": "idle",
+      "variant": "01",
+      "path": "sprites/stations/station_t5810_ai_flagship_idle_01.png",
+      "width": 128,
+      "height": 128,
+      "frame_count": 1,
+      "loop": false,
+      "transparent": true,
+      "tags": ["server", "ai", "flagship"],
+      "fallbacks": [
+        "station_generic_idle_01",
+        "placeholder_station"
+      ],
+      "notes": "Default world-map station icon for the T5810 AI machine."
+    },
+    {
+      "id": "room_ai_core_busy_01",
+      "category": "room",
+      "subject": "ai_core",
+      "state": "busy",
+      "variant": "01",
+      "path": "sprites/rooms/room_ai_core_busy_01.png",
+      "tags": ["llm", "gpu", "models"],
+      "fallbacks": [
+        "room_ai_core_idle_01",
+        "room_generic_busy_01",
+        "placeholder_room"
+      ]
+    },
+    {
+      "id": "agent_engineer_repair_01",
+      "category": "agent",
+      "subject": "engineer",
+      "state": "repair",
+      "variant": "01",
+      "path": "sprites/agents/agent_engineer_repair_01.png",
+      "frame_count": 4,
+      "frame_rate": 8,
+      "loop": true,
+      "tags": ["linux", "docker", "repair"],
+      "fallbacks": [
+        "agent_engineer_idle_01",
+        "agent_generic_idle_01",
+        "placeholder_agent"
+      ]
+    },
+    {
+      "id": "effect_ssh_beam_active_01",
+      "category": "effect",
+      "subject": "ssh_beam",
+      "state": "active",
+      "variant": "01",
+      "path": "sprites/effects/effect_ssh_beam_active_01.png",
+      "frame_count": 6,
+      "frame_rate": 12,
+      "loop": true,
+      "tags": ["network", "ssh", "connection"],
+      "fallbacks": [
+        "effect_connection_generic_active_01",
+        "placeholder_effect"
+      ]
+    }
+  ]
+}
